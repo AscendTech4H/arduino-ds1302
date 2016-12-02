@@ -102,7 +102,7 @@ String Time::formatTime(){
 }
 
 const String dow[7]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};	//Remember to subtract 1
-const String monthname[7]={"January","February","March","April","May","June","July",
+const String monthname[12]={"January","February","March","April","May","June","July",
 				"August","September","October","November","December"};		//Remember to subtract 1
 String Time::formatDate(){
 	String wd,m,d,y;
