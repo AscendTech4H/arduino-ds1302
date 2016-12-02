@@ -97,9 +97,9 @@ String Time::formatTime(){
 	}
 	h=String((hr%12)+1,DEC);
 	m=String(min,DEC);
-	if(min<10){m=m+"0";}
+	if(min<10){m="0"+m;}
 	s=String(sec,DEC);
-	if(sec<10){s=s+"0";}
+	if(sec<10){s="0"+s;}
 	return h+":"+m+":"+s+" "+apm;
 }
 
