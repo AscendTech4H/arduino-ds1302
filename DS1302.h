@@ -15,8 +15,8 @@ class Time {
 	enum Day {
 		kSunday		= 1,
 		kMonday		= 2,
-		kTuesday	 = 3,
-		kWednesday = 4,
+		kTuesday	= 3,
+		kWednesday	= 4,
 		kThursday	= 5,
 		kFriday		= 6,
 		kSaturday	= 7
@@ -43,6 +43,9 @@ class Time {
 	uint8_t mon;
 	Day day;
 	uint16_t yr;
+	String formatTime();
+	String formatDate();
+	String formatDateTime();
 };
 
 // An interface to the Dallas Semiconductor DS1302 Real Time Clock (RTC) chip.

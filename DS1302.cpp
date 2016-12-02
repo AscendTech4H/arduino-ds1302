@@ -88,6 +88,35 @@ Time::Time(const uint16_t yr, const uint8_t mon, const uint8_t date,
 	this->day	= day;
 }
 
+String Time::formatTime(){
+	String apm,h,m,s;
+	if(hr>11){
+		apm="PM";
+	}else{
+		apm="AM";
+	}
+	h=String((hr%12)+1,DEC);
+	m=String(min,DEC);
+	s=String(sec,DEC);
+	return h+":"+m+":"+s+" "+apm;
+}
+
+const String dow[7]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};	//Remember to subtract 1
+const String monthname[7]={"January","February","March","April","May","June","July",
+				"August","September","October","November","December"};		//Remember to subtract 1
+String Time::formatDate(){
+	String wd,m,d,y;
+	wd=dow[day-1];			//Day of week
+	m=monthname[mon-1];		//Month
+	d=String(date,DEC);		//Day of month
+	y=String(yr,DEC);		//Year
+	return wd+" "+m+" "+d+" "+y;
+}
+
+String Time::formatDateTime(){
+	return formatDate()+" "+formatTime();
+}
+
 DS1302::DS1302(const uint8_t ce_pin, const uint8_t io_pin,
 							 const uint8_t sclk_pin) {
 	ce_pin_ = ce_pin;
