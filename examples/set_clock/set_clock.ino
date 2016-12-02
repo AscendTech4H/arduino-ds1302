@@ -73,6 +73,7 @@ void setup() {
 
 // Loop and print the time every second.
 void loop() {
-  printTime();
+  //printTime();
+  Serial.println(rtc.time().formatDateTime());
   delay(1000);
 }
