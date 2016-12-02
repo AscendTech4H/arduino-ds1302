@@ -90,7 +90,7 @@ Time::Time(const uint16_t yr, const uint8_t mon, const uint8_t date,
 
 String Time::formatTime(){
 	String apm,h,m,s;
-	if(hr>11){
+	if((hr>11)&&(hr!=24)){
 		apm="PM";
 	}else{
 		apm="AM";
