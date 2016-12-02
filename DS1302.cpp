@@ -95,7 +95,11 @@ String Time::formatTime(){
 	}else{
 		apm="AM";
 	}
-	h=String((hr%12)+1,DEC);
+	if(hr>12){
+		h=String(hr-12,DEC);
+	}else{
+		h=String(hr,DEC);
+	}
 	m=String(min,DEC);
 	if(min<10){m="0"+m;}
 	s=String(sec,DEC);
