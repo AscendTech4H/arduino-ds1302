@@ -27,11 +27,4 @@ directory contains example sketches for immediate use.
 
 ## Installing
 
-Place the `DS1302` directory in the `libraries` subdirectory of your Arduino
-sketch directory. On OS X, for example, your sketch directory might be:
-
-    /Users/you/Documents/Arduino
-
-In that case, you should put the `DS1302` directory at:
-
-    /Users/you/Documents/Arduino/libraries/DS1302
+Download the zip of this repository. In Arduino, click Sketch -> Import Library -> Add .ZIP Library (formerly Add Library)
