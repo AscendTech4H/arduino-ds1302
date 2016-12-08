@@ -6,6 +6,12 @@
 // http://quadpoint.org/projects/arduino-ds1302
 #include <DS1302.h>
 
+const int kCePin   = 5;  // Chip Enable
+const int kIoPin   = 6;  // Input/Output
+const int kSclkPin = 7;  // Serial Clock
+
+DS1302 rtc(kCePin, kIoPin, kSclkPin);
+
 void setup() {
   Serial.begin(9600);
 
